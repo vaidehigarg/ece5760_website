@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ECE 5760: Card Detection</title>
+    <title>ECE 5760: Playing Card Recognition</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">ECE 5760: Card Detection</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">ECE 5760: Playing Card Recognition</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,10 +33,10 @@
               <a class="nav-link js-scroll-trigger" href="#intro">Introduction</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#fpga">FPGA</a>
+              <a class="nav-link js-scroll-trigger" href="#overview">Overview</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#hps">HPS</a>
+              <a class="nav-link js-scroll-trigger" href="#implementation">Implementation</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#testing">Testing</a>
@@ -45,7 +45,10 @@
               <a class="nav-link js-scroll-trigger" href="#results">Results</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#results">References</a>
+              <a class="nav-link js-scroll-trigger" href="#references">References</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#appendix-a">Appendices</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#ack">Acknowledgements</a>
@@ -55,50 +58,58 @@
       </div>
     </nav>
 
-    <header style="background-color: red" class="text-white">
+    <header style="background-color: #009520" class="text-white">
       <div class="container text-center">
-        <h1>ECE 5760: Card Detection</h1>
-        <p class="lead">Dan Edens (de229), Albert Chu (ac2369), Vaidehi Garg (vg254)</p>
+        <h1>ECE 5760: Playing Card Recognition</h1>
+        <p class="lead">Albert Chu (ac2369), Dan Edens (de229), Vaidehi Garg (vg254)</p>
       </div>
     </header>
 
     <section id="intro">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <h2>Introduction</h2>
-            <p class="lead">Add introduction here.</p>
+            <p class="lead">For our final project for ECE 5760, we drew inspiration from <a href="https://hackaday.io/project/27639-rainman-20-blackjack-robot">this project</a>, and built a system that recognizes alphanumeric characters on playing cards -- but without the use of OpenCV. The project was intended to be the first step towards implementing an automated blackjack player on a DE1-SoC board. We picked this project because we wanted to combine the unique abilities of the DE1-SoC board, and implement a project that involved computer vision, parallelization, and user interaction.</p>
+            <p class="lead">Our project implementation was distributed over both the FPGA and the HPS, which communicated with each other using parallel I/O ports instantiated in Qsys. We implemented the project in stages, starting with a MATLAB implementation, and then porting the logic over to C, and finally implementing certain parts in Verilog. This helped in testing, debugging, and benchmarking our implementation.</p>
+
           </div>
         </div>
       </div>
     </section>
 
-    <section id="fpga" class="bg-light">
+    <section id="overview" class="bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>FPGA Implementation</h2>
-            <p class="lead">Add details of FPGA implementation here.</p>
+          <div class="col-lg-12 mx-auto">
+            <h2>Overview</h2>
+            <p class="lead">garbage</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="hps">
+    <section id="implementation">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>HPS Implementation</h2>
-            <p class="lead">Add details about HPS implementation here.</p>
+          <div class="col-lg-12 mx-auto">
+            <h2>Implementation</h2>
+            <p class="lead">garbage</p>
+            <h4>FPGA</h4>
+            <p class="lead">garbage</p>
+            <h4>Qsys Setup</h4>
+            <p class="lead">garbage</p>
+            <h4>HPS</h4>
+            <p class="lead">garbage</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="testing">
+    <section id="testing" class="bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <h2>Testing</h2>
             <p class="lead">Add details about testing here.</p>
           </div>
@@ -109,20 +120,56 @@
     <section id="results">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Results</h2>
+          <div class="col-lg-12 mx-auto">
+            <h2>Results & Analysis</h2>
             <p class="lead">Add details about results here.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="references">
+    <section id="references" class="bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <h2>References</h2>
-            <p class="lead">Add references.</p>
+            <p class="lead"><a href="http://www.mdpi.com/1424-8220/16/3/353/htm">[1] Radial sweep contour following algorithm.</a></p>
+            <p class="lead"><a href="https://people.ece.cornell.edu/land/courses/ece5760/DE1_SOC/HPS_peripherials/univ_pgm_computer.index.html">[2] Converting Video to SDRAM 640x480 8-bit color.</a></p>
+            <p class="lead"><a href="https://hackaday.io/project/27639-rainman-20-blackjack-robot">[3] Blackjack robot on RaspberryPi using OpenCV.</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="appendix-a">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>Appendix A: Permissions</h2>
+            <p class="lead">This group approves this report for inclusion on the course website.</p>
+            <p class="lead">This group approves the video for inclusion on the course YouTube channel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="appendix-b" class="bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>Appendix B: Source Code</h2>
+            <p class="lead">Access the code here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="appendix-c">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 mx-auto">
+            <h2>Appendix C: Work Distribution</h2>
+            <p class="lead">All group members contributed to all parts of the project, including Verilog logic, HPS code, debugging, and the final report. Dan performed the initial implementation in MATLAB, and helped implement the HPS and Verilog versions. Albert worked on the implementation in C and the user interface. Vaidehi helped port the implementation over from C to Verilog, and debug the HPS and Verilog versions.</p>
           </div>
         </div>
       </div>
@@ -131,9 +178,9 @@
     <section id="ack">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-12 mx-auto">
             <h2>Acknowledgements</h2>
-            <p class="lead">Include acknowledgements.</p>
+            <p class="lead">We would like to thank Prof. Bruce Land, and TAs Mark Zhao and Claire Chen for their help throughout the course.</p>
           </div>
         </div>
       </div>
