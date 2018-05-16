@@ -21,7 +21,9 @@ The video stream from the camera was input into the FPGA and then stored in memo
 
 ## References
 **[[1] Blackjack robot on RaspberryPi using OpenCV.](https://hackaday.io/project/27639-rainman-20-blackjack-robot)**
+
 **[[2] Converting Video to SDRAM 640x480 8-bit color.](https://people.ece.cornell.edu/land/courses/ece5760/DE1_SOC/HPS_peripherials/univ_pgm_computer.index.html)**
+
 **[[3] Radial sweep contour following algorithm.](http://www.mdpi.com/1424-8220/16/3/353/htm)**
 
 ## Appendices
