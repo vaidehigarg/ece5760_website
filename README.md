@@ -30,6 +30,7 @@ The video stream from the camera was input into the FPGA and then stored in memo
 
 ### Appendix A: Permissions
 This group approves this report for inclusion on the course website.
+
 This group approves the video for inclusion on the course YouTube channel.
 
 ### Appendix B: Source Code
