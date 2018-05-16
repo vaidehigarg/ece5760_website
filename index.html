@@ -83,7 +83,8 @@
         <div class="row">
           <div class="col-lg-12 mx-auto">
             <h2>Overview</h2>
-            <p class="lead">garbage</p>
+            <p class="lead">Our project uses the FPGA and the HPS on the DE1-SoC board to implement a character recognition algorithm for playing cards. Apart from the board, our hardware consisted of an NTSC bullet camera facing downwards onto a black background, and a wooden platform onto which the camera was mounted. The cards we used were larger print playing cards, since the camera resolution was low, and we needed larger characters to implement accurate character recognition.</p>
+            <p class="lead">The video stream from the camera was input into the FPGA and then stored in memory in the form of image captures. This memory was accessed by the VGA subsystem for display on a VGA screen, and also by the FPGA and the HPS for analysis of the image captured. The FPGA performs contour traversal on the image to find the outline of the card, and detects its corners. This data is sent over to the HPS along with the image itself. The HPS uses this data to rotate the image, extract the symbol on the top left corner, and perform symbol recognition on it. The user interface was implemented on the console using the HPS.</p>
           </div>
         </div>
       </div>
