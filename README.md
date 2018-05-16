@@ -11,38 +11,27 @@ Our project uses the FPGA and the HPS on the DE1-SoC board to implement a charac
 The video stream from the camera was input into the FPGA and then stored in memory in the form of image captures. This memory was accessed by the VGA subsystem for display on a VGA screen, and also by the FPGA and the HPS for analysis of the image captured. The FPGA performs contour traversal on the image to find the outline of the card, and detects its corners. This data is sent over to the HPS along with the image itself. The HPS uses this data to rotate the image, extract the symbol on the top left corner, and perform symbol recognition on it. The user interface was implemented on the console using the HPS.
 
 ## Implementation
+### FPGA
+### Qsys Setup
+### HPS
 
 ## Testing
 
 ## Results
 
 ## References
+**[[1] Blackjack robot on RaspberryPi using OpenCV.](https://hackaday.io/project/27639-rainman-20-blackjack-robot)**
+**[[2] Converting Video to SDRAM 640x480 8-bit color.](https://people.ece.cornell.edu/land/courses/ece5760/DE1_SOC/HPS_peripherials/univ_pgm_computer.index.html)**
+**[[3] Radial sweep contour following algorithm.](http://www.mdpi.com/1424-8220/16/3/353/htm)**
 
 ## Appendices
 
 ### Appendix A: Permissions
+This group approves this report for inclusion on the course website.
+This group approves the video for inclusion on the course YouTube channel.
+
 ### Appendix B: Source Code
+Access the code here.
+
 ### Appendix C: Work Distribution
-
-## Custom Builds
-
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-scrolling-nav/blob/gh-pages/LICENSE) license.
+All group members contributed to all parts of the project, including Verilog logic, HPS code, debugging, and the final report. Dan performed the initial implementation in MATLAB, and helped implement the HPS and Verilog versions. Albert worked on the implementation in C and the user interface. Vaidehi helped port the implementation over from C to Verilog, and debug the HPS and Verilog versions.
